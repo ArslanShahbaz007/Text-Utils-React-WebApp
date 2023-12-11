@@ -3,13 +3,13 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Textarea from "./components/Textarea";
-import About from "./components/About";
+// import About from "./components/About";
 import Alert from "./components/Alert";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+// } from "react-router-dom";
 
 function App() {
   const [alert, setalert] = useState(null);
@@ -35,7 +35,7 @@ function App() {
   };
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar
         title="TextUtils"
         AboutText="About"
@@ -44,16 +44,16 @@ function App() {
         />
       <Alert alert={alert} />
       <div className="container my-5">
-      <Switch>
-          <Route exact path="/about">
-            <About/>
-          </Route>
-          <Route exact path="/">
+      {/* <Switch> */}
+          {/* <Route exact path="/about"> */}
+            {/* <About/> */}
+          {/* </Route> */}
+          {/* <Route exact path="/"> */}
         <Textarea mode={mode} showAlert={showAlert} />
-          </Route>
-        </Switch> 
+          {/* </Route> */}
+        {/* </Switch>  */}
       </div>
-      </Router> 
+      {/* </Router>  */}
     </>
   );
 }

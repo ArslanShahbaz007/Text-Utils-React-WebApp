@@ -42,9 +42,9 @@ export default function Textarea(props) {
   <div className="mb-3">
     <textarea htmlFor= "mytextarea" placeholder='Enter Text here' onChange={handleTextareaChange} className="form-control" value={data} id="exampleFormControlTextarea1" rows="8"> </textarea>
   </div>
-  <button className="btn btn-primary"  onClick={converttouppercase}>Convert To Uppercase</button>
-  <button className="btn btn-primary mx-2" onClick={converttolowercase}>Convert To Lowercase</button>
-  <button className="btn btn-primary mx-2" onClick={cleartext}>Clear Text</button>
+  <button className="btn btn-primary" disabled={data.length===0} onClick={converttouppercase}>Convert To Uppercase</button>
+  <button className="btn btn-primary mx-2" disabled={data.length===0} onClick={converttolowercase}>Convert To Lowercase</button>
+  <button className="btn btn-primary mx-2" disabled={data.length===0} onClick={cleartext}>Clear Text</button>
   
     </div>
     <div>
